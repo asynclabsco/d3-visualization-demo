@@ -1,0 +1,30 @@
+{
+  "name": "d3-charts-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AsyncLabs",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.0",
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.16.3",
+    "webpack-cli": "^3.1.0"
+  },
+  "devDependencies": {
+    "babel-loader": "^7.1.5",
+    "browser-sync": "^2.24.6",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "d3": "^5.5.0",
+    "mini-css-extract-plugin": "^0.4.1",
+    "modernizr": "^3.6.0",
+    "uglifyjs-webpack-plugin": "^1.2.7"
+  }
+}
