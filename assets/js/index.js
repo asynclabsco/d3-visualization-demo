@@ -2,7 +2,7 @@ import 'style/style.scss';
 import DashboardComponent from 'DashboardComponent';
 
 (function () {
-  d3.dsv(',', '/dist/data/athlete_events.csv', function (row) {
+  d3.dsv(',', 'dist/data/athlete_events.csv', function (row) {
     return {
       name: row['Name'],
       sex: row['Sex'],
