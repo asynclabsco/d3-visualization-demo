@@ -6,6 +6,16 @@ body {
     font-family: 'Muli', sans-serif;
     font-size: 14px;
     line-height: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.c-meta {
+
+    h1 {
+        line-height: 36px;
+    }
 }
 
 @import "components/chart";
