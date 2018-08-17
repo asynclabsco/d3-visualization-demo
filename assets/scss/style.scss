@@ -1,0 +1,11 @@
+$primary: #2055b6;
+$lightPrimary: lighten($primary, 10%);
+$reallyLightPrimary: lighten($primary, 20%);
+
+body {
+    font-family: 'Muli', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+@import "components/chart";

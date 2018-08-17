@@ -11,10 +11,6 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-
-//				options: {
-//					presets: ['env']
-//				}
       },
       {
         test: /\.(scss|css)$/,
@@ -51,7 +47,7 @@ module.exports = {
     new BrowserSyncPlugin({
       host: 'localhost',
       proxy: 'localhost:8000',
-      files: ['**/*.php', '**/*.html', './web/static/dist/*.js', './web/static/dist/*.css']
+      files: ['**/*.php', '**/*.html', './dist/*.js', './dist/*.css']
     }, {
       reload: false
     })
@@ -62,6 +58,13 @@ module.exports = {
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
+  },
+
+  resolve: {
+    alias: {
+      style: path.resolve(__dirname, 'assets/scss'),
+    },
+    modules: [path.resolve(__dirname, 'assets/js'), 'node_modules']
   },
 
   mode: 'production',
