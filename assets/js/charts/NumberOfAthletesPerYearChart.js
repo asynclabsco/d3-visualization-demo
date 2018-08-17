@@ -18,18 +18,21 @@ export default class NumberOfAthletesPerYearChart {
   createGroupFromDimension () {
     this.numberOfAthletesPerYearGroup = this.athletesDimension.group()
       .reduce(
-        (p, v) => {
-          p.count++;
-          p.year = v.year;
-          p.season = v.season;
-          return p;
+        // reduceAdd()
+        (output, input) => {
+          output.count++;
+          output.year = input.year;
+          output.season = input.season;
+          return output;
         },
-        (p, v) => {
-          --p.count;
-          p.year = v.year;
-          p.season = v.season;
-          return p;
+        // reduceRemove()
+        (output, input) => {
+          --output.count;
+          output.year = input.year;
+          output.season = input.season;
+          return output;
         },
+        // reduceInitial()
         () => {
           return {year: null, season: null, count: 0};
         }
@@ -54,7 +57,7 @@ export default class NumberOfAthletesPerYearChart {
 
     this.countScale = d3.scaleLinear().domain([0, maxCount.value.count]).range([chartHeight, this.margin]);
     // TODO We are hardcoding years for now
-    this.yearScale = d3.scaleLinear().domain([1896, 2016]).range([this.margin, chartWidth]);
+    this.yearScale = d3.scaleLinear().domain([1896, 2018]).range([this.margin, chartWidth]);
   }
 
   drawAxes () {
@@ -122,7 +125,6 @@ export default class NumberOfAthletesPerYearChart {
   }
 
   render () {
-    this.createGroupFromDimension();
     this.createSvg();
     this.initScales();
     this.drawAxes();
