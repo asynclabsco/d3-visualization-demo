@@ -126,12 +126,12 @@ export default class WeightHeightChart {
         return this.countScale(d.value.count);
       })
       .on('mouseover', (d) => {
-        let weightText = d.value.weight + '-' + this.weightGroupSize + d.value.weight + 'kg ';
+        let weightText = d.value.weight + '-' + (+this.weightGroupSize + +d.value.weight) + 'kg ';
         if (d.value.weight === 0) {
           weightText = 'N/A kg ';
         }
 
-        let heightText = d.value.height + '-' + this.heightGroupSize + d.value.height + 'cm ';
+        let heightText = d.value.height + '-' + (+this.heightGroupSize + +d.value.height) + 'cm ';
         if (d.value.height === 0) {
           heightText = 'N/A cm ';
         }
