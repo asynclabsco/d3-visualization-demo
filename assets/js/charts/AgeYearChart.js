@@ -159,6 +159,7 @@ export default class AgeYearChart {
       .append('g')
       .attr('transform', 'translate(' + this.margin + ' ,0)')
       .selectAll('g')
+      .attr('class', 'c-bars')
       .data(barData)
       .enter()
       .selectAll('rect')
@@ -195,10 +196,6 @@ export default class AgeYearChart {
   }
 
   createTooltipIfDoesntExist () {
-    if (this.tooltipContainer !== null) {
-      return;
-    }
-
     this.tooltipContainer = this.chartContainer
       .append('div')
       .attr('class', 'c-tooltip');
@@ -221,9 +218,7 @@ export default class AgeYearChart {
   hideTooltip () {
     this.createTooltipIfDoesntExist();
 
-    this.tooltipContainer
-      .transition()
-      .duration(500)
-      .style('opacity', 0);
+    d3.selectAll('.c-tooltip').remove();
+    this.tooltipContainer = null;
   }
 }

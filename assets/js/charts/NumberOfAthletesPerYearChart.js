@@ -133,10 +133,6 @@ export default class NumberOfAthletesPerYearChart {
   }
 
   createTooltipIfDoesntExist () {
-    if (this.tooltipContainer !== null) {
-      return;
-    }
-
     this.tooltipContainer = this.chartContainer
       .append('div')
       .attr('class', 'c-tooltip');
@@ -159,9 +155,7 @@ export default class NumberOfAthletesPerYearChart {
   hideTooltip () {
     this.createTooltipIfDoesntExist();
 
-    this.tooltipContainer
-      .transition()
-      .duration(500)
-      .style('opacity', 0);
+    d3.selectAll('.c-tooltip').remove();
+    this.tooltipContainer = null;
   }
 }
