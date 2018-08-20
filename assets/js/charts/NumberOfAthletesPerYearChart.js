@@ -7,7 +7,7 @@ export default class NumberOfAthletesPerYearChart {
     this.chartContainer = d3.select('#yearAthletesCountChart');
     this.chart = null; // This will hold chart SVG Dom element reference
     this.chartWidth = 960; // Width in pixels
-    this.chartHeight = 400; // Height in pixels
+    this.chartHeight = 300; // Height in pixels
     this.margin = 50; // Margin in pixels
     this.chartHeightWithoutMargin = this.chartHeight - this.margin;
     this.countScale = null;

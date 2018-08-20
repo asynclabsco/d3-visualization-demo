@@ -11,7 +11,7 @@ export default class WeightHeightChart {
     this.chartContainer = d3.select('#weightHeightChart');
     this.chart = null; // This will hold chart SVG Dom element reference
     this.chartWidth = 960; // Width in pixels
-    this.chartHeight = 400; // Height in pixels
+    this.chartHeight = 300; // Height in pixels
     this.margin = 50; // Margin in pixels
     this.chartWidthWithoutMargin = this.chartWidth - this.margin;
     this.chartHeightWithoutMargin = this.chartHeight - this.margin;
@@ -88,7 +88,7 @@ export default class WeightHeightChart {
 
     this.weightScale = d3.scaleLinear().domain([0, maxWeight]).range([this.margin, this.chartWidthWithoutMargin]);
     this.heightScale = d3.scaleLinear().domain([0, maxHeight]).range([this.chartHeightWithoutMargin, this.margin]);
-    this.countScale = d3.scalePow().domain([0, maxCount]).range([2, 10]);
+    this.countScale = d3.scalePow().domain([0, maxCount]).range([3, 10]);
   }
 
   drawAxes () {
