@@ -25,6 +25,7 @@
             &:hover {
                 fill: $reallyLightPrimary;
                 opacity: 1;
+                cursor: pointer;
             }
         }
     }
@@ -38,6 +39,17 @@
 
     &--half {
         flex-basis: 50%;
+    }
+}
+
+.c-bars {
+
+    rect {
+        opacity: 0.6;
+
+        &:hover{
+            cursor: pointer;
+        }
     }
 }
 
