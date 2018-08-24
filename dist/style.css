@@ -1,13 +1,18 @@
 body {
   font-family: 'Muli', sans-serif;
   font-size: 14px;
-  line-height: 16px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center; }
+  line-height: 16px; }
 
-.c-meta h1 {
-  line-height: 36px; }
+.container {
+  margin: 0 auto;
+  max-width: 960px; }
+
+a {
+  color: #2055b6; }
+  a:hover {
+    color: #2f6bda; }
+  a:visited {
+    color: #2055b6; }
 
 .c-charts {
   display: flex;
@@ -53,4 +58,20 @@ body {
   border: 1px solid #2055b6;
   position: absolute;
   background: white; }
+
+.c-meta h1 {
+  line-height: 36px; }
+
+.c-meta .c-company__copyright {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 25px; }
+
+.c-meta .c-company__copyright-text {
+  margin-right: 25px; }
+
+.c-meta .c-company__copyright-image {
+  display: inline-block; }
 

@@ -1,0 +1,25 @@
+.c-meta {
+
+    h1 {
+        line-height: 36px;
+    }
+
+    .c-company {
+
+        &__copyright {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        &__copyright-text {
+            margin-right: 25px;
+        }
+
+        &__copyright-image {
+            display: inline-block;
+        }
+    }
+}
